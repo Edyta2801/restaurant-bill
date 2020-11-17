@@ -10,15 +10,32 @@ class CalculatorClass extends Component {
     state = {
         amount: 0,
         tip: 0,
-        result: 0
+        result: 0,
+        name: ''
+
     };
 
-    handleChange = (e) => {
-        const { name, value } = e.target;
+    handleChangeAmount = (e) => {
+        console.log('input value', e.target.value)
         this.setState({
-            [name]: value
+            amount: e.target.value
         });
     };
+    handleChangeTip = (e) => {
+        console.log('input value', e.target.value)
+        this.setState({
+            tip: e.target.value
+        });
+    };
+
+
+
+    // handleChange = (e) => {
+    //     const { name, value } = e.target;
+        // this.setState({
+        //     [name]: value
+        // });
+    // };
 
     handleSubmit = (e) => {
         e.preventDefault();
@@ -42,8 +59,10 @@ class CalculatorClass extends Component {
         return (
             <form onSubmit={this.handleSubmit}>
                 <h2>Calculator class </h2>
-                <Input value={amount} changeHandler={this.handleChange} />
-                <Select value={tip} changeHandler={this.handleChange} />
+                <Input value={amount} changeHandler={this.handleChangeAmount} />
+                {/* <Input value={amount} changeHandler={this.handleChange} /> */}
+                <Select value={tip} changeHandler={this.handleChangeTip} />
+                {/* <Select value={tip} changeHandler={this.handleChange} /> */}
                 <Button />
                 <Result value={result} />
             </form>
