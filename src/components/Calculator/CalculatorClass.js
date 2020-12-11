@@ -31,6 +31,7 @@ class CalculatorClass extends Component {
 
 
     // handleChange = (e) => {
+        // const { target: { name, value } } = e;   or
     //     const { name, value } = e.target;
         // this.setState({
         //     [name]: value
