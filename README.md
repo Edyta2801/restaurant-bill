@@ -12,3 +12,10 @@ Po wysłaniu wynik niech wyświetli się zamiast formularza.
 
 ## Modyfikacja
 Wykonaj to zadanie zarówno za pomocą komponentu klasowego jak i funkcyjnego
+
+
+# Pobieranie danych z API:
+
+## w komponencie klasowym
+
+## w komponencie funkcyjnym
