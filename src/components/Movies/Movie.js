@@ -6,7 +6,9 @@ class Movie extends React.Component {
     }
 
     componentDidMount() {
-        fetch('https://srapi.herokuapp.com/v1/movies/fb91de45-f3e4-45d8-a9f6-82c4bf7577d6')
+           // this.props.match.params
+           const { params } = this.props.match;
+        fetch(`https://srapi.herokuapp.com/v1/movies/${params.id}`)
             .then(response => {
                 // response.status
                 return response.json()

@@ -1,4 +1,10 @@
 import React from 'react';
+import {
+  BrowserRouter as Router, Link, Switch, Route
+} from 'react-router-dom';
+
+
+
 import './App.css';
 // import {CalculatorFunction, CalculatorClass, CalculatorFunctionWithHook}  from './components/Calculator';
 import MoviesList from './components/Movies/MoviesList';
@@ -31,12 +37,21 @@ import Movie from './components/Movies/Movie';
 function App() {
   return (
     <div className="App">
+      <Router>
+        <nav>
+          <Link to='/'>Home</Link>
+        </nav>
+        <Switch>
+          <Route path='/movies/:id' component={Movie} />
+          <Route path='/' exact component={MoviesList} />
+        </Switch>
+      </Router>
       {/* <CalculatorFunction/>
       <CalculatorFunctionWithHook/>
       <CalculatorClass/> */}
-      <h1>Class component!</h1>
+      {/* <h1>Class component!</h1>
       <MoviesList />
-      <Movie />
+      <Movie /> */}
       {/* <h1>Function component</h1> */}
       {/* <MoviesHooks /> */}
     </div>
